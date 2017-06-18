@@ -22,15 +22,16 @@ a {
 }
 h1, p{
   color: DeepPink ;
+  font-weight: bold;
 }
 h1{
   font-size: 50px;
-  font-weight: bolder;
 }
 
 textarea, input{
   width: 100%;
-  border-radius: 0px;
+  padding: 10px;
+  border-radius: 10px;
   border: 1px solid DeepPink;
   margin-bottom: 20px;
 }
@@ -57,7 +58,17 @@ footer{
   padding: 10px;
 }
 
-
-
 /* Estilos comentarios */
 
+.comment{
+    background-color: rgb(210, 175, 197);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.btn{
+    color: #f5f3f4;
+    background-color: #E91E63;
+    font-weight: bold;
+}
