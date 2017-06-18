@@ -18,6 +18,9 @@ function guardarDatos(){
 	for( var i= 0; i < localStorage.length; i++){
 		 var clav= localStorage.key(i); //Obtengo la clave(dato1) al cual le tomare su valor(comentario).
 		 var value = localStorage.getItem(clav);
+
+		 var divcito= document.createElement("div");
+		     divcito.setAttribute("class", "comment");        
          
          var nombre = document.createElement("h2");
          var valor1= document.createTextNode(clav);
@@ -27,9 +30,10 @@ function guardarDatos(){
 
          nombre.appendChild(valor1);//Se creo más arriba un h2(var nombre),al cual le asigno un valor(var valor1), que este caso sera el nombre ingresado por el usuario.
          comentario.appendChild(valor2);//Se creo más arriba un p(var comentario),al cual le asigno un valor(var valor2), que este caso sera el comentario ingresado por el usuario.
-
-         contenedor.appendChild(nombre);//Agrego los valores de nombre y comentario al contenedor.
-         contenedor.appendChild(comentario);
+         
+         divcito.appendChild(nombre);// Agrego los valores de nombre y comentario.
+         divcito.appendChild(comentario);
+         contenedor.appendChild(divcito);//Agrego el div que contiene los valores de nombre y comentario al contenedor.
 
          document.getElementById("clave").value= "";//Limpio campos de los input de nombre y comentario.
          document.getElementById("valor").value= "";
