@@ -4,7 +4,7 @@ function init(){
 	var guardado= document.getElementById("guardar");
 	guardado.addEventListener("click", guardarDatos);
 	guardarDatos();
-}
+};
 
 function guardarDatos(){
 	var dato1 = document.getElementById("clave").value;//Obtengo valores de los input de nombre y comentario.
@@ -33,7 +33,14 @@ function guardarDatos(){
 
          document.getElementById("clave").value= "";//Limpio campos de los input de nombre y comentario.
          document.getElementById("valor").value= "";
-     }
-}    
+     };
+};    
+
+var limpiarDatos = document.getElementById("limpiar"); //Esta funcion limpia el contenedor y retira todos los comentarios(dejan de ser visibles). Pero los datos siguen guardados.
+    limpiarDatos.addEventListener("click", function(){ 
+
+    	contenedor.innerHTML= "";
+    });
+
 
 init();
